@@ -1,35 +1,65 @@
-# EvidenceRPG Private
+﻿# EvidenceRPG
 
-Private source-of-truth repository for the EvidenceRPG system.
+EvidenceRPG is an evidence-governed professional-development system.
 
-## Purpose
+Instead of treating activity, time spent, or self-assessment as proof
+of capability, EvidenceRPG models progression around inspectable evidence.
 
-EvidenceRPG models professional progression as evidence-governed state transitions.
-
-Core rule:
+## Governing rule
 
 > XP measures activity. Evidence determines level.
 
+## Evidence states
+
+1. **Practiced** - capability has been exercised.
+2. **Documented** - inspectable documentation exists.
+3. **Validated** - work has been evaluated against defined criteria.
+4. **Verified** - outside review, reproduction, evaluation, or equivalent external evidence exists.
+
 ## Repository role
 
-This repository may contain private working data, evidence records,
-development artifacts, experiments, and material that is not approved
-for public release.
+This repository contains the public EvidenceRPG dashboard and only
+material intentionally approved for public disclosure.
 
-Nothing should be transferred to the public repository without explicit
-review and sanitization.
+It is not the canonical operational repository.
 
-## Data boundary
+The canonical EvidenceRPG system is maintained privately. Material is
+promoted to this repository only after explicit disclosure review.
 
-The following material must remain local and untracked:
+See: `docs/PUBLICATION_POLICY.md`
 
-- Raw evidence
-- Private evidence records
-- Local databases
-- Environment configuration
-- Credentials and cryptographic keys
-- Private exports
-- Files matching *.local.json or *.private.json
+## Architecture
 
-The public repository is maintained independently and does not inherit
-this repository's Git history.
+The interface and campaign state are separated:
+
+```text
+React UI
+   |
+   +-- src/App.tsx
+   |
+   +-- src/data/campaign.ts
+```
+
+This boundary allows separate public and private disclosure profiles
+without embedding campaign state directly inside the interface.
+
+## Development
+
+```powershell
+npm install
+npm run dev
+```
+
+Production build:
+
+```powershell
+npm run build
+```
+
+## Deployment
+
+Public dashboard: https://rpg.secpriva.com
+
+## Version
+
+Current infrastructure baseline: **v0.1.0**
