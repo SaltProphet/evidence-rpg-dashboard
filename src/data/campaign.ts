@@ -1,6 +1,6 @@
 ﻿export const campaignData = {
   profile: {
-    name: "JUSTIN STRANGE",
+    name: "PLAYER PROFILE",
     version: "Version 0 Character Sheet",
     primaryClass: "Systems Designer / Technical Researcher",
     secondaryClass: "Interdisciplinary Artist / Creative Technologist",
@@ -120,7 +120,7 @@
   financialStability: [
     { label: "Subscriptions reduced", status: "COMPLETED", color: "text-emerald-400" },
     { label: "Spending categorized", status: "COMPLETED", color: "text-emerald-400" },
-    { label: "LLC finances separated", status: "COMPLETED", color: "text-emerald-400" },
+    { label: "Business finances separated", status: "COMPLETED", color: "text-emerald-400" },
     { label: "Compute spending measured", status: "IN PROGRESS", color: "text-blue-400" },
     { label: "Project economics understood", status: "PENDING", color: "text-neutral-500" }
   ]
