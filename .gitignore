@@ -25,3 +25,9 @@ dist-ssr
 
 .vercel
 .env*
+
+# Private EvidenceRPG repository
+/evidence-rpg-private/
+
+# Local environment
+.env.local
